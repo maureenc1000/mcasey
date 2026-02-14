@@ -1,0 +1,40 @@
+/* Global body styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+header {
+    background-color: #00008B; /* dark blue */
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* Main section styles */
+main {
+    background-color: #ADD8E6; /* light blue */
+    color: black;
+    padding: 40px 20px;
+}
+
+/* Headings inside main */
+main h2 {
+    margin-top: 0;
+}
+
+/* Paragraph styles */
+p {
+    line-height: 1.6;
+}
+
+/* Links inside main */
+main a {
+    color: #001f4d; /* dark blue links */
+    text-decoration: none;
+}
+
+main a:hover {
+    text-decoration: underline;
+}
