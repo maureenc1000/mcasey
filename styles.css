@@ -6,10 +6,15 @@ body {
 
 /* Header styles */
 header {
-    background-color: #00008B; /* dark blue */
+    background-color: #001f4d; /* dark blue */
     color: white;
     text-align: center;
     padding: 40px 20px;
+}
+
+.logo {
+    width: 120px;
+    margin-bottom: 10px;
 }
 
 /* Main section styles */
