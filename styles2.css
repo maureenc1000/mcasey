@@ -26,6 +26,9 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: rgba(0, 49, 83, 0.6); /* #003153 tint */
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 /* Main section styles */
