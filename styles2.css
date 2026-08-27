@@ -21,7 +21,7 @@ header {
 }
 
 .overlay {
-    background: rgba(0, 20, 60, 0.75);
+    background: rgba(0, 49, 83, 0.75);
     height: 100%;
     display: flex;
     flex-direction: column;
