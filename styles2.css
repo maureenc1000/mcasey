@@ -28,6 +28,11 @@ header {
     align-items: center;
 }
 
+.overlay h1,
+.overlay p {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
 /* Main section styles */
 main {
     background-color: #ADD8E6; /* light blue */
