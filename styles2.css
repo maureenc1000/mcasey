@@ -17,7 +17,7 @@ header {
     background-position: center;
     position: relative;
     height: 350px;
-    color: white;
+    color: black;
 }
 
 .overlay {
@@ -26,11 +26,6 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.overlay h1,
-.overlay p {
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 
 /* Main section styles */
