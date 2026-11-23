@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maureen Casey | Data Portfolio</title>
   <meta name="description" content="Data analytics portfolio of Maureen Casey: machine learning, visualization, SQL and data engineering projects.">
-  <link rel="stylesheet" href="site.css?v=01a5feb7">
+  <link rel="stylesheet" href="site.css?v=15b59588">
 </head>
 <body>
   <header class="hero">
@@ -65,12 +65,21 @@
         <ul class="tc-list" id="list-etl"><li><a href="#p-income-and-census-pipeline">Income and Census Pipeline</a></li><li><a href="#p-connecting-to-an-api">Connecting to an API</a></li><li><a href="#p-weather-api">Weather API</a></li><li class="tc-all"><a href="#all-etl">See all 3 projects</a></li></ul>
       </div>
       </div>
+      <div class="skill-row">
+        <h3>Browse by skill or tool</h3>
+        <div class="skill-chips"><a class="skill-chip" href="#skill-python" data-skill="python">Python <span class="count">18</span></a><a class="skill-chip" href="#skill-sql" data-skill="sql">SQL <span class="count">4</span></a><a class="skill-chip" href="#skill-ml" data-skill="ml">Machine Learning <span class="count">7</span></a><a class="skill-chip" href="#skill-tableau" data-skill="tableau">Tableau <span class="count">2</span></a><a class="skill-chip" href="#skill-powerbi" data-skill="powerbi">Power BI <span class="count">1</span></a><a class="skill-chip" href="#skill-r" data-skill="r">R <span class="count">1</span></a><a class="skill-chip" href="#skill-apis" data-skill="apis">APIs <span class="count">3</span></a></div>
+      </div>
+    </section>
+    <section class="topic skill-results" id="skills" hidden>
+      <div class="topic-bar"><h2 class="skill-title">Projects by skill</h2><a class="back" href="#topics">Back to topics</a></div>
+      <p class="topic-intro skill-intro"></p>
+      <div class="grid"></div>
     </section>
     <section class="topic" id="all-ml" data-topic="ml">
       <div class="topic-bar"><h2>Machine Learning and Predictive Modeling</h2><a class="back" href="#topics">Back to topics</a></div>
       <p class="topic-intro">Classification, recommendation and forecasting, judged against simple baselines.</p>
       <div class="grid">
-        <article class="card header-card" id="p-telecom-churn-modeling">
+        <article class="card header-card" id="p-telecom-churn-modeling" data-skills="python sql ml powerbi">
           <div class="card-head"><h3>Telecom Churn Modeling</h3></div>
           <div class="card-body">
             <p class="desc">Machine learning model churn analysis, including Logistic Regression and Random Forest.</p>
@@ -81,7 +90,7 @@
             <a class="view" href="https://github.com/maureenc1000/Portfolio/tree/main/Telecom%20Churn%20Modeling">View Project</a>
           </div>
         </article>
-        <article class="card header-card" id="p-fraud-detection">
+        <article class="card header-card" id="p-fraud-detection" data-skills="python ml">
           <div class="card-head"><h3>Fraud Detection</h3></div>
           <div class="card-body">
             <p class="desc">Comparing five models for flagging fraudulent card transactions when fraud is only 3.5% of the data.</p>
@@ -92,7 +101,7 @@
             <a class="view" href="https://github.com/maureenc1000/Portfolio/tree/main/Fraud%20Detection">View Project</a>
           </div>
         </article>
-        <article class="card header-card" id="p-shopping-behavior-who-subscribes">
+        <article class="card header-card" id="p-shopping-behavior-who-subscribes" data-skills="python ml">
           <div class="card-head"><h3>Shopping Behavior: Who Subscribes?</h3></div>
           <div class="card-body">
             <p class="desc">Testing whether customer behavior predicts subscription, and checking how the model gets its accuracy.</p>
@@ -103,7 +112,7 @@
             <a class="view" href="https://github.com/maureenc1000/Portfolio/tree/main/Shopping%20Behavior%20Analysis">View Project</a>
           </div>
         </article>
-        <article class="card header-card" id="p-movie-recommender">
+        <article class="card header-card" id="p-movie-recommender" data-skills="python ml">
           <div class="card-head"><h3>Movie Recommender</h3></div>
           <div class="card-body">
             <p class="desc">Recommending movies from 100,836 ratings with SVD matrix factorization.</p>
@@ -114,7 +123,7 @@
             <a class="view" href="https://github.com/maureenc1000/Portfolio/tree/main/Movie%20Recommender">View Project</a>
           </div>
         </article>
-        <article class="card header-card" id="p-retail-sales-prediction-model">
+        <article class="card header-card" id="p-retail-sales-prediction-model" data-skills="python ml">
           <div class="card-head"><h3>Retail Sales Prediction Model</h3></div>
           <div class="card-body">
             <p class="desc">Time series forecasting using the Holt-Winters Exponential Smoothing method in Python.</p>
@@ -131,7 +140,7 @@
       <div class="topic-bar"><h2>NLP and AI</h2><a class="back" href="#topics">Back to topics</a></div>
       <p class="topic-intro">Text analytics and automation.</p>
       <div class="grid">
-        <article class="card header-card" id="p-sentiment-analysis">
+        <article class="card header-card" id="p-sentiment-analysis" data-skills="python ml">
           <div class="card-head"><h3>Sentiment Analysis</h3></div>
           <div class="card-body">
             <p class="desc">Comparing prebuilt sentiment analyzers with classifiers trained on 25,000 IMDB movie reviews.</p>
@@ -142,7 +151,7 @@
             <a class="view" href="https://github.com/maureenc1000/Portfolio/tree/main/Sentiment%20Analysis">View Project</a>
           </div>
         </article>
-        <article class="card header-card" id="p-meeting-comment-classifier">
+        <article class="card header-card" id="p-meeting-comment-classifier" data-skills="python ml">
           <div class="card-head"><h3>Meeting Comment Classifier</h3></div>
           <div class="card-body">
             <p class="desc">Pulling comments and suggestions out of meeting transcripts, tagged by speaker and topic, into an Excel repository.</p>
@@ -159,7 +168,7 @@
       <div class="topic-bar"><h2>Data Visualization and Storytelling</h2><a class="back" href="#topics">Back to topics</a></div>
       <p class="topic-intro">Charts, dashboards and recommendations built for a specific audience.</p>
       <div class="grid">
-        <article class="card header-card" id="p-medicaid-spending-on-glp-1-drugs">
+        <article class="card header-card" id="p-medicaid-spending-on-glp-1-drugs" data-skills="python">
           <div class="card-head"><h3>Medicaid Spending on GLP-1 Drugs</h3></div>
           <div class="card-body">
             <p class="desc">Tracking state Medicaid spending on Zepbound and Wegovy from 2.6 million rows of CMS data.</p>
@@ -170,7 +179,7 @@
             <a class="view" href="https://github.com/maureenc1000/Portfolio/tree/main/Medicaid%20GLP-1%20Spending">View Project</a>
           </div>
         </article>
-        <article class="card header-card" id="p-child-care-costs-eda-and-visualizations">
+        <article class="card header-card" id="p-child-care-costs-eda-and-visualizations" data-skills="python tableau">
           <div class="card-head"><h3>Child Care Costs EDA and Visualizations</h3></div>
           <div class="card-body">
             <p class="desc">Using Python - Matplotlib and Seaborn to create static and interactive visualizations.</p>
@@ -181,7 +190,7 @@
             <a class="view" href="https://github.com/maureenc1000/Portfolio/tree/main/ChildCareCostsEDAandVisualizations">View Project</a>
           </div>
         </article>
-        <article class="card header-card" id="p-kia-car-theft-project-in-r">
+        <article class="card header-card" id="p-kia-car-theft-project-in-r" data-skills="r">
           <div class="card-head"><h3>Kia Car Theft Project in R</h3></div>
           <div class="card-body">
             <p class="desc">Vehicle theft trends were explored using R and the tidyverse ecosystem.</p>
@@ -192,7 +201,7 @@
             <a class="view" href="https://github.com/maureenc1000/Portfolio/tree/main/Kia%20Car%20Theft%20Project%20in%20R">View Project</a>
           </div>
         </article>
-        <article class="card header-card" id="p-tsa-complaints-dashboard">
+        <article class="card header-card" id="p-tsa-complaints-dashboard" data-skills="python tableau">
           <div class="card-head"><h3>TSA Complaints Dashboard</h3></div>
           <div class="card-body">
             <p class="desc">An interactive Tableau dashboard for airport operations managers, with a Python ETL step.</p>
@@ -203,7 +212,7 @@
             <a class="view" href="https://github.com/maureenc1000/Portfolio/tree/main/TSA%20Complaints%20Dashboard">View Project</a>
           </div>
         </article>
-        <article class="card header-card" id="p-white-house-visitor-logs">
+        <article class="card header-card" id="p-white-house-visitor-logs" data-skills="python">
           <div class="card-head"><h3>White House Visitor Logs</h3></div>
           <div class="card-body">
             <p class="desc">Access patterns from public visitor logs, built for security analysts.</p>
@@ -214,7 +223,7 @@
             <a class="view" href="https://github.com/maureenc1000/Portfolio/tree/main/White%20House%20Visitor%20Logs">View Project</a>
           </div>
         </article>
-        <article class="card header-card" id="p-dodgers-attendance">
+        <article class="card header-card" id="p-dodgers-attendance" data-skills="python">
           <div class="card-head"><h3>Dodgers Attendance</h3></div>
           <div class="card-body">
             <p class="desc">What fills the stadium, and how to raise attendance.</p>
@@ -225,7 +234,7 @@
             <a class="view" href="https://github.com/maureenc1000/Portfolio/tree/main/Dodgers%20Attendance">View Project</a>
           </div>
         </article>
-        <article class="card header-card" id="p-case-load-project">
+        <article class="card header-card" id="p-case-load-project" data-skills="python">
           <div class="card-head"><h3>Case Load Project</h3></div>
           <div class="card-body">
             <p class="desc">Using Python to create interactive Choropleth maps to help suggest new case load distribution.</p>
@@ -236,7 +245,7 @@
             <a class="view" href="https://github.com/maureenc1000/Portfolio/tree/main/Case%20Load%20Project">View Project</a>
           </div>
         </article>
-        <article class="card header-card" id="p-lottery-scatterplot">
+        <article class="card header-card" id="p-lottery-scatterplot" data-skills="python">
           <div class="card-head"><h3>Lottery Scatterplot</h3></div>
           <div class="card-body">
             <p class="desc">Using Python to visualize number patterns through a scatterplot.</p>
@@ -247,7 +256,7 @@
             <a class="view" href="https://github.com/maureenc1000/Portfolio/tree/main/Lottery%20Scatterplot">View Project</a>
           </div>
         </article>
-        <article class="card header-card" id="p-netflix-eda-and-visualizations">
+        <article class="card header-card" id="p-netflix-eda-and-visualizations" data-skills="python">
           <div class="card-head"><h3>Netflix EDA and Visualizations</h3></div>
           <div class="card-body">
             <p class="desc">Data science techniques were used to analyze Netflix data.</p>
@@ -264,7 +273,7 @@
       <div class="topic-bar"><h2>SQL and Database Design</h2><a class="back" href="#topics">Back to topics</a></div>
       <p class="topic-intro">Relational design and business questions answered in T-SQL.</p>
       <div class="grid">
-        <article class="card header-card" id="p-sql-case-study">
+        <article class="card header-card" id="p-sql-case-study" data-skills="sql">
           <div class="card-head"><h3>SQL Case Study</h3></div>
           <div class="card-body">
             <p class="desc">Hypothetical software system proposal supported by a fully designed relational database.</p>
@@ -275,7 +284,7 @@
             <a class="view" href="https://github.com/maureenc1000/Portfolio/tree/main/SQL%20Case%20Study">View Project</a>
           </div>
         </article>
-        <article class="card header-card" id="p-sql-retail-research">
+        <article class="card header-card" id="p-sql-retail-research" data-skills="sql">
           <div class="card-head"><h3>SQL Retail Research</h3></div>
           <div class="card-body">
             <p class="desc">Answering seven sales questions with SQL on 1,445 customers and 4,722 order items.</p>
@@ -292,7 +301,7 @@
       <div class="topic-bar"><h2>Data Wrangling and APIs</h2><a class="back" href="#topics">Back to topics</a></div>
       <p class="topic-intro">Getting data from files, websites and APIs into clean, joinable tables.</p>
       <div class="grid">
-        <article class="card header-card" id="p-income-and-census-pipeline">
+        <article class="card header-card" id="p-income-and-census-pipeline" data-skills="python sql apis">
           <div class="card-head"><h3>Income and Census Pipeline</h3></div>
           <div class="card-body">
             <p class="desc">A flat file, a web scrape and an API source, each cleaned to one row per ZIP code and merged in SQLite.</p>
@@ -303,7 +312,7 @@
             <a class="view" href="https://github.com/maureenc1000/Portfolio/tree/main/Income%20and%20Census%20Pipeline">View Project</a>
           </div>
         </article>
-        <article class="card header-card" id="p-connecting-to-an-api">
+        <article class="card header-card" id="p-connecting-to-an-api" data-skills="python apis">
           <div class="card-head"><h3>Connecting to an API</h3></div>
           <div class="card-body">
             <p class="desc">Using Python to process data from an API.</p>
@@ -314,7 +323,7 @@
             <a class="view" href="https://github.com/maureenc1000/Portfolio/tree/main/Connecting%20to%20an%20API">View Project</a>
           </div>
         </article>
-        <article class="card header-card" id="p-weather-api">
+        <article class="card header-card" id="p-weather-api" data-skills="python apis">
           <div class="card-head"><h3>Weather API</h3></div>
           <div class="card-body">
             <p class="desc">API integration, including error handling and JSON data.</p>
@@ -380,11 +389,45 @@
         var sec = el.closest('section.topic');
         render(null, sec.dataset.topic, sec, el);
         if (scroll) scrollTo(sec);
+      } else if (id.indexOf('skill-') === 0 && document.querySelector('.skill-chip[data-skill="' + id.slice(6) + '"]')) {
+        showSkill(id.slice(6));                                     // every project that uses one skill
+        if (scroll) scrollTo(skillSection);
       } else {
         render(null, null, null, null);
         if (scroll && id === 'topics') scrollTo(document.getElementById('topics'));
       }
+      var current = id.indexOf('skill-') === 0 ? id.slice(6) : '';
+      chips.forEach(function (c) { c.classList.toggle('active', c.dataset.skill === current); });
     }
+    // Browse by skill: copy the matching project cards (from every topic) into one list
+    var skillSection = document.getElementById('skills');
+    var chips = document.querySelectorAll('.skill-chip');
+    function showSkill(skill) {
+      var chip = document.querySelector('.skill-chip[data-skill="' + skill + '"]');
+      var label = chip.firstChild.textContent.trim();
+      var grid = skillSection.querySelector('.grid');
+      grid.innerHTML = '';
+      document.querySelectorAll('section.topic:not(#skills) .card').forEach(function (card) {
+        if ((' ' + card.dataset.skills + ' ').indexOf(' ' + skill + ' ') === -1) return;
+        var copy = card.cloneNode(true);
+        copy.removeAttribute('id');
+        copy.hidden = false;
+        grid.appendChild(copy);
+      });
+      var n = grid.children.length;
+      skillSection.querySelector('.skill-title').textContent = 'Projects using ' + label;
+      skillSection.querySelector('.skill-intro').textContent = n + (n === 1 ? ' project' : ' projects') + ' from across the topics.';
+      render(null, null, skillSection, null);
+    }
+    chips.forEach(function (c) {
+      c.addEventListener('click', function (e) {
+        if (c.classList.contains('active')) {   // clicking the selected skill again clears it
+          e.preventDefault();
+          history.pushState(null, '', '#topics');
+          fromHash(false);
+        }
+      });
+    });
     function closeMenu() {
       var open = document.querySelector('.topic-card.open');
       if (!open) return;

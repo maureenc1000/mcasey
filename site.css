@@ -334,6 +334,38 @@ html:not(.js) .tc-arrow { display: none; }
 .topic-bar .back { color: var(--accent); font-size: 0.92rem; padding-bottom: 6px; }
 html:not(.js) .topic-bar .back { display: none; }
 
+/* Browse by skill: buttons under the topic cards; the matching projects show below */
+.skill-row { margin-top: 26px; }
+.skill-row h3 { margin: 0 0 10px; color: var(--navy); font-size: 1.1rem; }
+.skill-chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.skill-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 14px;
+    border: 2px solid var(--navy);
+    border-radius: 999px;
+    color: var(--navy);
+    background: var(--card);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: background 0.15s, color 0.15s;
+}
+.skill-chip .count {
+    min-width: 22px;
+    padding: 1px 7px;
+    border-radius: 999px;
+    background: #e3f0f6;
+    color: var(--navy);
+    font-size: 0.8rem;
+    text-align: center;
+}
+.skill-chip:hover, .skill-chip:focus-visible { background: #e3f0f6; }
+.skill-chip.active { background: var(--accent); border-color: var(--accent); color: white; }
+.skill-chip.active .count { background: white; color: var(--accent); }
+html:not(.js) .skill-row { display: none; }   /* without JavaScript every project is already listed */
+
 /* Middle card style: blue header, findings, then a smaller chart (used by index.html) */
 .header-card img.card-chart {
     display: block;
