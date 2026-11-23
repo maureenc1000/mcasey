@@ -1,88 +1,411 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maureen Casey | Data Portfolio</title>
-    <link rel="stylesheet" href="styles2.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maureen Casey | Data Portfolio</title>
+  <meta name="description" content="Data analytics portfolio of Maureen Casey: machine learning, visualization, SQL and data engineering projects.">
+  <link rel="stylesheet" href="site.css">
 </head>
 <body>
-<header class="hero">
+  <header class="hero">
+    <h1 class="sr-only">Maureen Casey</h1>
+    <img class="banner" src="images/banner.png" width="1584" height="396"
+         alt="Maureen Casey, Senior Business Intelligence Analyst. Data Analytics, Enterprise Reporting, Risk Management. MS in Data Science, CFE, CIA.">
     <div class="overlay">
-        <h1>Maureen Casey</h1>
-        <p>Data Analytics | Visualization | Business Intelligence | Data Engineering</p><br>
+      <p class="summary">21 projects using Python, SQL, R, Tableau and Power BI, from predictive models to dashboards built for decision makers.</p>
+      <div class="hero-links">
+        <a href="#topics">View projects</a>
+        <a href="https://www.linkedin.com/in/maureen-e-casey">LinkedIn</a>
+        <a href="https://github.com/maureenc1000/Portfolio">GitHub</a>
+      </div>
     </div>
-</header>
-<main>
-    <section>
-    <h2>Projects</h2>
-    <ul>
-        <li>
-            <strong>Case Load Project</strong><br>
-            Using Python to create interactive Chloropleth maps to help suggest new case load distribution.<br>
-            <a href="https://github.com/maureenc1000/Portfolio/tree/main/Case Load Project">View Project</a><hr>
-        </li>
-
-        <li>
-            <strong>Child Care Costs EDA and Visualizations</strong><br>
-            Using Python - Matplotlib and Seaborn to create static and interactive visualizations.<br>
-            <a href="https://github.com/maureenc1000/Portfolio/tree/main/ChildCareCostsEDAandVisualizations">View Project</a><hr>
-        </li>
-
-        <li>
-            <strong>Connecting to an API</strong><br>
-            Using Python to process data from an API.<br>
-            <a href="https://github.com/maureenc1000/Portfolio/tree/main/Connecting to an API">View Project</a><hr>
-        </li>
-        
-        <li>
-            <strong>Kia Car Theft Project in R</strong><br>
-             Vehicle theft trends were explored using R and the tidyverse ecosystem.<br>
-            <a href="https://github.com/maureenc1000/Portfolio/tree/main/Kia Car Theft Project in R">View Project</a><hr>
-        </li>
-        
-        <li>
-            <strong>Lottery Scatterplot</strong><br>
-            Using Python to visualize number patterns through a scatterplot.<br>
-            <a href="https://github.com/maureenc1000/Portfolio/tree/main/Lottery Scatterplot">View Project</a><hr>
-        </li>
-
-        <li>
-            <strong>Netflix EDA and Visualizations</strong><br>
-            Data science techniques were used to analyze Netflix data.<br>
-            <a href="https://github.com/maureenc1000/Portfolio/tree/main/Netflix EDA and Visualizations">View Project</a><hr>
-        </li>
-
-        <li>
-            <strong>Retail Sales Prediction Model</strong><br>
-            Time series forecasting using the Holt-Winters Exponential Smoothing method in Python.<br>
-            <a href="https://github.com/maureenc1000/Portfolio/tree/main/Retail Sales Prediction Model">View Project</a><hr>
-        </li>
-
-        <li>
-            <strong>SQL Case Study</strong><br>
-            Hypothetical software system proposal supported by a fully designed relational database.<br>
-            <a href="https://github.com/maureenc1000/Portfolio/tree/main/SQL Case Study">View Project</a><hr>
-        </li>
-
-        <li>
-            <strong>Telecom Churn Modeling</strong><br>
-            Machine learning model churn analysis, including Logistic Regression and Random Forest.<br>
-            <a href="https://github.com/maureenc1000/Portfolio/tree/main/Telecom Churn Modeling">View Project</a><hr>
-        </li>
-
-        <li>
-            <strong>Weather API</strong><br>
-            API integration, including error handling and JSON data.<br>
-            <a href="https://github.com/maureenc1000/Portfolio/tree/main/Weather API">View Project</a><hr>
-        </li>
-    </ul>
-</section>
-
-    <h2>Contact</h2>
-    <p>Email: maureen.casey001@gmail.com</p>
-    <p>Connect with me on LinkedIN <a href="https://www.linkedin.com/in/maureen-e-casey">LinkedIN</a></p>
-</main>
-    
+  </header>
+  <nav class="topics" aria-label="Project topics"><a href="#ml">Machine Learning and Predictive Modeling</a><a href="#nlp">NLP and AI</a><a href="#viz">Data Visualization and Storytelling</a><a href="#sql">SQL and Database Design</a><a href="#etl">Data Wrangling and APIs</a><a href="#contact">Contact</a></nav>
+  <main>
+    <section class="topic-picker" id="topics">
+      <h2>Projects by topic</h2>
+      <p class="topic-intro">Click a topic, then a project name to see its details.</p>
+      <div class="topic-grid">
+      <div class="topic-card" id="ml" data-topic="ml">
+        <a class="tc-head" href="#ml" aria-controls="list-ml" aria-expanded="false">
+          <span class="tc-title">Machine Learning and Predictive Modeling</span>
+          <span class="tc-arrow" aria-hidden="true"></span>
+        </a>
+        <ul class="tc-list" id="list-ml"><li><a href="#p-telecom-churn-modeling">Telecom Churn Modeling</a></li><li><a href="#p-fraud-detection">Fraud Detection</a></li><li><a href="#p-shopping-behavior-who-subscribes">Shopping Behavior: Who Subscribes?</a></li><li><a href="#p-movie-recommender">Movie Recommender</a></li><li><a href="#p-retail-sales-prediction-model">Retail Sales Prediction Model</a></li><li class="tc-all"><a href="#all-ml">See all 5 projects</a></li></ul>
+      </div>
+      <div class="topic-card" id="nlp" data-topic="nlp">
+        <a class="tc-head" href="#nlp" aria-controls="list-nlp" aria-expanded="false">
+          <span class="tc-title">NLP and AI</span>
+          <span class="tc-arrow" aria-hidden="true"></span>
+        </a>
+        <ul class="tc-list" id="list-nlp"><li><a href="#p-sentiment-analysis">Sentiment Analysis</a></li><li><a href="#p-meeting-comment-classifier">Meeting Comment Classifier</a></li><li class="tc-all"><a href="#all-nlp">See all 2 projects</a></li></ul>
+      </div>
+      <div class="topic-card" id="viz" data-topic="viz">
+        <a class="tc-head" href="#viz" aria-controls="list-viz" aria-expanded="false">
+          <span class="tc-title">Data Visualization and Storytelling</span>
+          <span class="tc-arrow" aria-hidden="true"></span>
+        </a>
+        <ul class="tc-list" id="list-viz"><li><a href="#p-medicaid-spending-on-glp-1-drugs">Medicaid Spending on GLP-1 Drugs</a></li><li><a href="#p-child-care-costs-eda-and-visualizations">Child Care Costs EDA and Visualizations</a></li><li><a href="#p-kia-car-theft-project-in-r">Kia Car Theft Project in R</a></li><li><a href="#p-tsa-complaints-dashboard">TSA Complaints Dashboard</a></li><li><a href="#p-white-house-visitor-logs">White House Visitor Logs</a></li><li><a href="#p-dodgers-attendance">Dodgers Attendance</a></li><li><a href="#p-case-load-project">Case Load Project</a></li><li><a href="#p-lottery-scatterplot">Lottery Scatterplot</a></li><li><a href="#p-netflix-eda-and-visualizations">Netflix EDA and Visualizations</a></li><li class="tc-all"><a href="#all-viz">See all 9 projects</a></li></ul>
+      </div>
+      <div class="topic-card" id="sql" data-topic="sql">
+        <a class="tc-head" href="#sql" aria-controls="list-sql" aria-expanded="false">
+          <span class="tc-title">SQL and Database Design</span>
+          <span class="tc-arrow" aria-hidden="true"></span>
+        </a>
+        <ul class="tc-list" id="list-sql"><li><a href="#p-sql-case-study">SQL Case Study</a></li><li><a href="#p-sql-retail-research">SQL Retail Research</a></li><li class="tc-all"><a href="#all-sql">See all 2 projects</a></li></ul>
+      </div>
+      <div class="topic-card" id="etl" data-topic="etl">
+        <a class="tc-head" href="#etl" aria-controls="list-etl" aria-expanded="false">
+          <span class="tc-title">Data Wrangling and APIs</span>
+          <span class="tc-arrow" aria-hidden="true"></span>
+        </a>
+        <ul class="tc-list" id="list-etl"><li><a href="#p-income-and-census-pipeline">Income and Census Pipeline</a></li><li><a href="#p-connecting-to-an-api">Connecting to an API</a></li><li><a href="#p-weather-api">Weather API</a></li><li class="tc-all"><a href="#all-etl">See all 3 projects</a></li></ul>
+      </div>
+      </div>
+    </section>
+    <section class="topic" id="all-ml" data-topic="ml">
+      <div class="topic-bar"><h2>Machine Learning and Predictive Modeling</h2><a class="back" href="#topics">Back to topics</a></div>
+      <p class="topic-intro">Classification, recommendation and forecasting, judged against simple baselines.</p>
+      <div class="grid">
+        <article class="card header-card" id="p-telecom-churn-modeling">
+          <div class="card-head"><h3>Telecom Churn Modeling</h3></div>
+          <div class="card-body">
+            <p class="desc">Machine learning model churn analysis, including Logistic Regression and Random Forest.</p>
+            <ul class="results"><li>26.6% of 7,032 customers churned, about $139K in monthly charges</li><li>Month-to-month customers churn at 42.7% and make up 88.6% of churners</li><li>Logistic regression catches 78.6% of churners (ROC AUC 0.833); 655 high-risk active customers flagged for outreach</li></ul>
+            
+            <img class="card-chart" src="images/projects/telecom_churn.png" alt="Chart from the Telecom Churn Modeling project" loading="lazy">
+            <div class="tags"><span>Python</span><span>SQL</span><span>scikit-learn</span><span>Power BI</span></div>
+            <a class="view" href="https://github.com/maureenc1000/Portfolio/tree/main/Telecom%20Churn%20Modeling">View Project</a>
+          </div>
+        </article>
+        <article class="card header-card" id="p-fraud-detection">
+          <div class="card-head"><h3>Fraud Detection</h3></div>
+          <div class="card-body">
+            <p class="desc">Comparing five models for flagging fraudulent card transactions when fraud is only 3.5% of the data.</p>
+            <ul class="results"><li>590,540 labeled transactions; accuracy alone is misleading (96.5% by never flagging anything)</li><li>Undersampled random forest: best AUC (0.772) and catches 66.0% of fraud</li><li>Plain random forest: 40.4% of its flags are fraud, showing the catch-rate vs. false-alarm trade-off</li></ul>
+            
+            <img class="card-chart" src="images/projects/fraud_detection.png" alt="Chart from the Fraud Detection project" loading="lazy">
+            <div class="tags"><span>Python</span><span>scikit-learn</span><span>Imbalanced data</span></div>
+            <a class="view" href="https://github.com/maureenc1000/Portfolio/tree/main/Fraud%20Detection">View Project</a>
+          </div>
+        </article>
+        <article class="card header-card" id="p-shopping-behavior-who-subscribes">
+          <div class="card-head"><h3>Shopping Behavior: Who Subscribes?</h3></div>
+          <div class="card-body">
+            <p class="desc">Testing whether customer behavior predicts subscription, and checking how the model gets its accuracy.</p>
+            <ul class="results"><li>Random forest looks strong at 81.0% accuracy</li><li>But every subscriber used a discount and promo code; those columns give the answer away</li><li>Without them, nothing else predicts subscription: a lesson in checking for leakage</li></ul>
+            
+            <img class="card-chart" src="images/projects/shopping_behavior.png" alt="Chart from the Shopping Behavior: Who Subscribes? project" loading="lazy">
+            <div class="tags"><span>Python</span><span>scikit-learn</span><span>Model validation</span></div>
+            <a class="view" href="https://github.com/maureenc1000/Portfolio/tree/main/Shopping%20Behavior%20Analysis">View Project</a>
+          </div>
+        </article>
+        <article class="card header-card" id="p-movie-recommender">
+          <div class="card-head"><h3>Movie Recommender</h3></div>
+          <div class="card-body">
+            <p class="desc">Recommending movies from 100,836 ratings with SVD matrix factorization.</p>
+            <ul class="results"><li>Prediction error of 0.861 stars after tuning, vs. 1.045 for always guessing the average</li><li>Movies similar to Toy Story: Aladdin, Toy Story 2, The Little Mermaid</li><li>Movies similar to The Matrix: Die Hard, Star Wars, Inception</li></ul>
+            
+            <img class="card-chart" src="images/projects/movie_recommender.png" alt="Chart from the Movie Recommender project" loading="lazy">
+            <div class="tags"><span>Python</span><span>Surprise</span><span>Recommender systems</span></div>
+            <a class="view" href="https://github.com/maureenc1000/Portfolio/tree/main/Movie%20Recommender">View Project</a>
+          </div>
+        </article>
+        <article class="card header-card" id="p-retail-sales-prediction-model">
+          <div class="card-head"><h3>Retail Sales Prediction Model</h3></div>
+          <div class="card-body">
+            <p class="desc">Time series forecasting using the Holt-Winters Exponential Smoothing method in Python.</p>
+            <ul class="results"><li>Forecast error (RMSE) of $45,157 million (MAPE 6.5%) for July 2020 to June 2021, vs. $48,985 million for a naive forecast</li><li>Under-forecast the spring 2021 surge by 11.7% to 14.4%</li></ul>
+            
+            <img class="card-chart" src="images/projects/retail_sales_forecast.png" alt="Chart from the Retail Sales Prediction Model project" loading="lazy">
+            <div class="tags"><span>Python</span><span>statsmodels</span><span>Time series</span></div>
+            <a class="view" href="https://github.com/maureenc1000/Portfolio/tree/main/Retail%20Sales%20Prediction%20Model">View Project</a>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="topic" id="all-nlp" data-topic="nlp">
+      <div class="topic-bar"><h2>NLP and AI</h2><a class="back" href="#topics">Back to topics</a></div>
+      <p class="topic-intro">Text analytics and automation.</p>
+      <div class="grid">
+        <article class="card header-card" id="p-sentiment-analysis">
+          <div class="card-head"><h3>Sentiment Analysis</h3></div>
+          <div class="card-body">
+            <p class="desc">Comparing prebuilt sentiment analyzers with classifiers trained on 25,000 IMDB movie reviews.</p>
+            <ul class="results"><li>TextBlob 68.5% and VADER 69.4% accurate with no training</li><li>Logistic regression on TF-IDF features: 89.1% accurate (ROC AUC 0.958)</li><li>Strongest signals: &quot;worst&quot; and &quot;waste&quot; vs. &quot;great&quot; and &quot;excellent&quot;</li></ul>
+            
+            <img class="card-chart" src="images/projects/sentiment_analysis.png" alt="Chart from the Sentiment Analysis project" loading="lazy">
+            <div class="tags"><span>Python</span><span>NLTK</span><span>scikit-learn</span><span>TF-IDF</span></div>
+            <a class="view" href="https://github.com/maureenc1000/Portfolio/tree/main/Sentiment%20Analysis">View Project</a>
+          </div>
+        </article>
+        <article class="card header-card" id="p-meeting-comment-classifier">
+          <div class="card-head"><h3>Meeting Comment Classifier</h3></div>
+          <div class="card-body">
+            <p class="desc">Pulling comments and suggestions out of meeting transcripts, tagged by speaker and topic, into an Excel repository.</p>
+            <ul class="results"><li>Rules engine F1 0.74 vs. scikit-learn 0.47 on 40 labeled sentences</li><li>Demo on a fictional meeting: 17 comments across 8 topics, duplicates skipped on rerun</li><li>Optional local LLM engine through Ollama</li></ul>
+            
+            <img class="card-chart" src="images/projects/meeting_comment_classifier.png" alt="Chart from the Meeting Comment Classifier project" loading="lazy">
+            <div class="tags"><span>Python</span><span>Regex</span><span>scikit-learn</span><span>openpyxl</span></div>
+            <a class="view" href="https://github.com/maureenc1000/Portfolio/tree/main/Meeting%20Comment%20Classifier">View Project</a>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="topic" id="all-viz" data-topic="viz">
+      <div class="topic-bar"><h2>Data Visualization and Storytelling</h2><a class="back" href="#topics">Back to topics</a></div>
+      <p class="topic-intro">Charts, dashboards and recommendations built for a specific audience.</p>
+      <div class="grid">
+        <article class="card header-card" id="p-medicaid-spending-on-glp-1-drugs">
+          <div class="card-head"><h3>Medicaid Spending on GLP-1 Drugs</h3></div>
+          <div class="card-body">
+            <p class="desc">Tracking state Medicaid spending on Zepbound and Wegovy from 2.6 million rows of CMS data.</p>
+            <ul class="results"><li>$1.68 billion for 1.49 million prescriptions in the first half of 2025, 3.20% of Medicaid drug spending</li><li>Zepbound prescriptions grew 41.7% from Q1 to Q2</li><li>Five states account for 83.0% of the dollars</li></ul>
+            
+            <img class="card-chart" src="images/projects/medicaid_glp1.png" alt="Chart from the Medicaid Spending on GLP-1 Drugs project" loading="lazy">
+            <div class="tags"><span>Python</span><span>pandas</span><span>SciPy</span></div>
+            <a class="view" href="https://github.com/maureenc1000/Portfolio/tree/main/Medicaid%20GLP-1%20Spending">View Project</a>
+          </div>
+        </article>
+        <article class="card header-card" id="p-child-care-costs-eda-and-visualizations">
+          <div class="card-head"><h3>Child Care Costs EDA and Visualizations</h3></div>
+          <div class="card-body">
+            <p class="desc">Using Python - Matplotlib and Seaborn to create static and interactive visualizations.</p>
+            <ul class="results"><li>Weekly infant care averaged $304 in DC and $302 in Massachusetts, vs. $79 in Mississippi</li><li>Prices rose 21.7% to 25.5% from 2008 to 2018, while household income rose 3.8%</li><li>A year of infant care cost 16.2% of median household income in 2018</li></ul>
+            <p class="note">Tableau screenshots coming soon.</p>
+            <img class="card-chart" src="images/projects/child_care_costs.png" alt="Chart from the Child Care Costs EDA and Visualizations project" loading="lazy">
+            <div class="tags"><span>Python</span><span>Plotly</span><span>Tableau</span></div>
+            <a class="view" href="https://github.com/maureenc1000/Portfolio/tree/main/ChildCareCostsEDAandVisualizations">View Project</a>
+          </div>
+        </article>
+        <article class="card header-card" id="p-kia-car-theft-project-in-r">
+          <div class="card-head"><h3>Kia Car Theft Project in R</h3></div>
+          <div class="card-body">
+            <p class="desc">Vehicle theft trends were explored using R and the tidyverse ecosystem.</p>
+            <ul class="results"><li>Car thefts rose 47.2% from 2019 to 2022</li><li>Kia and Hyundai went from 5.6% to 44.0% of monthly thefts</li><li>Five cities account for 48.6% of Kia/Hyundai thefts</li></ul>
+            
+            <img class="card-chart" src="images/projects/kia_hyundai_thefts.png" alt="Chart from the Kia Car Theft Project in R project" loading="lazy">
+            <div class="tags"><span>R</span><span>tidyverse</span><span>ggplot2</span></div>
+            <a class="view" href="https://github.com/maureenc1000/Portfolio/tree/main/Kia%20Car%20Theft%20Project%20in%20R">View Project</a>
+          </div>
+        </article>
+        <article class="card header-card" id="p-tsa-complaints-dashboard">
+          <div class="card-head"><h3>TSA Complaints Dashboard</h3></div>
+          <div class="card-body">
+            <p class="desc">An interactive Tableau dashboard for airport operations managers, with a Python ETL step.</p>
+            <ul class="results"><li>583,206 complaints at 443 airports, 2015 to 2024</li><li>The 2022-2023 jump comes almost entirely from one category: the Expedited Passenger Screening Program (37.1%)</li></ul>
+            <p class="note">Tableau screenshots coming soon.</p>
+            <img class="card-chart" src="images/projects/tsa_complaints.png" alt="Chart from the TSA Complaints Dashboard project" loading="lazy">
+            <div class="tags"><span>Tableau</span><span>Python</span><span>ETL</span></div>
+            <a class="view" href="https://github.com/maureenc1000/Portfolio/tree/main/TSA%20Complaints%20Dashboard">View Project</a>
+          </div>
+        </article>
+        <article class="card header-card" id="p-white-house-visitor-logs">
+          <div class="card-head"><h3>White House Visitor Logs</h3></div>
+          <div class="card-body">
+            <p class="desc">Access patterns from public visitor logs, built for security analysts.</p>
+            <ul class="results"><li>255,092 access events; the East Wing tour is the busiest destination (124,154)</li><li>Volume peaks in December, with December 2023 the busiest month (93,757)</li><li>Pseudonymous visitor IDs and a flag table narrow 195,121 visitors to 2,147 for review</li></ul>
+            
+            <img class="card-chart" src="images/projects/white_house_visitors.png" alt="Chart from the White House Visitor Logs project" loading="lazy">
+            <div class="tags"><span>Python</span><span>pandas</span><span>seaborn</span></div>
+            <a class="view" href="https://github.com/maureenc1000/Portfolio/tree/main/White%20House%20Visitor%20Logs">View Project</a>
+          </div>
+        </article>
+        <article class="card header-card" id="p-dodgers-attendance">
+          <div class="card-head"><h3>Dodgers Attendance</h3></div>
+          <div class="card-body">
+            <p class="desc">What fills the stadium, and how to raise attendance.</p>
+            <ul class="results"><li>Bobblehead games averaged 53,145 fans vs. 38,201 with no promotion</li><li>The lift holds on the same day of the week: +9,565 to +19,010 fans</li><li>Recommendation: test bobbleheads on Mondays, the weakest day</li></ul>
+            
+            <img class="card-chart" src="images/projects/dodgers_attendance.png" alt="Chart from the Dodgers Attendance project" loading="lazy">
+            <div class="tags"><span>Python</span><span>pandas</span><span>seaborn</span></div>
+            <a class="view" href="https://github.com/maureenc1000/Portfolio/tree/main/Dodgers%20Attendance">View Project</a>
+          </div>
+        </article>
+        <article class="card header-card" id="p-case-load-project">
+          <div class="card-head"><h3>Case Load Project</h3></div>
+          <div class="card-body">
+            <p class="desc">Using Python to create interactive Choropleth maps to help suggest new case load distribution.</p>
+            <ul class="results"><li>The East region carried 402 more cases than an even share</li><li>Moving 12 states brings every region within 43 cases of an even share</li></ul>
+            
+            <img class="card-chart" src="images/projects/csir_case_load.png" alt="Chart from the Case Load Project project" loading="lazy">
+            <div class="tags"><span>Python</span><span>Plotly</span><span>Dash</span></div>
+            <a class="view" href="https://github.com/maureenc1000/Portfolio/tree/main/Case%20Load%20Project">View Project</a>
+          </div>
+        </article>
+        <article class="card header-card" id="p-lottery-scatterplot">
+          <div class="card-head"><h3>Lottery Scatterplot</h3></div>
+          <div class="card-body">
+            <p class="desc">Using Python to visualize number patterns through a scatterplot.</p>
+            
+            
+            
+            <div class="tags"><span>Python</span><span>matplotlib</span></div>
+            <a class="view" href="https://github.com/maureenc1000/Portfolio/tree/main/Lottery%20Scatterplot">View Project</a>
+          </div>
+        </article>
+        <article class="card header-card" id="p-netflix-eda-and-visualizations">
+          <div class="card-head"><h3>Netflix EDA and Visualizations</h3></div>
+          <div class="card-body">
+            <p class="desc">Data science techniques were used to analyze Netflix data.</p>
+            
+            
+            
+            <div class="tags"><span>Python</span><span>seaborn</span></div>
+            <a class="view" href="https://github.com/maureenc1000/Portfolio/tree/main/Netflix%20EDA%20and%20Visualizations">View Project</a>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="topic" id="all-sql" data-topic="sql">
+      <div class="topic-bar"><h2>SQL and Database Design</h2><a class="back" href="#topics">Back to topics</a></div>
+      <p class="topic-intro">Relational design and business questions answered in T-SQL.</p>
+      <div class="grid">
+        <article class="card header-card" id="p-sql-case-study">
+          <div class="card-head"><h3>SQL Case Study</h3></div>
+          <div class="card-body">
+            <p class="desc">Hypothetical software system proposal supported by a fully designed relational database.</p>
+            <ul class="results"><li>9 tables and 2 views for a home repair business, with keys, a calculated column and balance views</li><li>A star schema for reporting on bids, queried with GROUP BY, HAVING and ROLLUP</li></ul>
+            
+            
+            <div class="tags"><span>SQL Server</span><span>T-SQL</span><span>Database design</span></div>
+            <a class="view" href="https://github.com/maureenc1000/Portfolio/tree/main/SQL%20Case%20Study">View Project</a>
+          </div>
+        </article>
+        <article class="card header-card" id="p-sql-retail-research">
+          <div class="card-head"><h3>SQL Retail Research</h3></div>
+          <div class="card-body">
+            <p class="desc">Answering seven sales questions with SQL on 1,445 customers and 4,722 order items.</p>
+            <ul class="results"><li>New York leads revenue at $5.22 million</li><li>43.8% of items over $500 broke the 20% minimum discount rule</li><li>39 customers have more than two orders</li></ul>
+            
+            
+            <div class="tags"><span>SQL Server</span><span>T-SQL</span></div>
+            <a class="view" href="https://github.com/maureenc1000/Portfolio/tree/main/SQL%20Retail%20Research">View Project</a>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="topic" id="all-etl" data-topic="etl">
+      <div class="topic-bar"><h2>Data Wrangling and APIs</h2><a class="back" href="#topics">Back to topics</a></div>
+      <p class="topic-intro">Getting data from files, websites and APIs into clean, joinable tables.</p>
+      <div class="grid">
+        <article class="card header-card" id="p-income-and-census-pipeline">
+          <div class="card-head"><h3>Income and Census Pipeline</h3></div>
+          <div class="card-body">
+            <p class="desc">A flat file, a web scrape and an API source, each cleaned to one row per ZIP code and merged in SQLite.</p>
+            <ul class="results"><li>IRS data for 27,786 ZIP codes and census population for 33,119</li><li>Highest per capita income: Montchanin, Delaware ($654,485), a ZIP code with 68 residents</li></ul>
+            
+            <img class="card-chart" src="images/projects/income_census_pipeline.png" alt="Chart from the Income and Census Pipeline project" loading="lazy">
+            <div class="tags"><span>Python</span><span>BeautifulSoup</span><span>Kaggle API</span><span>SQLite</span></div>
+            <a class="view" href="https://github.com/maureenc1000/Portfolio/tree/main/Income%20and%20Census%20Pipeline">View Project</a>
+          </div>
+        </article>
+        <article class="card header-card" id="p-connecting-to-an-api">
+          <div class="card-head"><h3>Connecting to an API</h3></div>
+          <div class="card-body">
+            <p class="desc">Using Python to process data from an API.</p>
+            <ul class="results"><li>Downloads 2010 census population through the Kaggle API and converts it to JSON</li><li>Reduced to one total per ZIP code: 312.4 million people across 33,119 ZIP codes</li></ul>
+            
+            
+            <div class="tags"><span>Python</span><span>Kaggle API</span><span>JSON</span></div>
+            <a class="view" href="https://github.com/maureenc1000/Portfolio/tree/main/Connecting%20to%20an%20API">View Project</a>
+          </div>
+        </article>
+        <article class="card header-card" id="p-weather-api">
+          <div class="card-head"><h3>Weather API</h3></div>
+          <div class="card-body">
+            <p class="desc">API integration, including error handling and JSON data.</p>
+            
+            
+            
+            <div class="tags"><span>Python</span><span>REST API</span><span>JSON</span></div>
+            <a class="view" href="https://github.com/maureenc1000/Portfolio/tree/main/Weather%20API">View Project</a>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="contact" id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:maureen.casey001@gmail.com">maureen.casey001@gmail.com</a></p>
+      <p>Connect with me on <a href="https://www.linkedin.com/in/maureen-e-casey">LinkedIn</a></p>
+    </section>
+  </main>
+  <footer>
+    <p>Code and data for every project are on <a href="https://github.com/maureenc1000/Portfolio">GitHub</a>.</p>
+    <p class="credit">Project code reviewed and cleaned up, and this site rebuilt, with help from <a href="https://www.anthropic.com/claude">Claude</a>, an AI assistant by Anthropic. Every result was re-run and checked against the actual output.</p>
+  </footer>
+  <script>
+  // Topic cards drop down a list of project names; a name shows that project's card below.
+  // Without JavaScript every list and every project stays visible.
+  (function () {
+    document.documentElement.classList.add('js');
+    var sections = document.querySelectorAll('section.topic');
+    var topicCards = document.querySelectorAll('.topic-card');
+    var bar = document.querySelector('nav.topics');
+    function scrollTo(el, onlyIfNeeded) {
+      // stop just below the sticky topic bar, whatever its height on this screen
+      var top = el.getBoundingClientRect().top, offset = bar.offsetHeight + 12;
+      if (onlyIfNeeded && top >= offset && top < window.innerHeight - 160) return;
+      window.scrollTo({top: top + window.scrollY - offset, behavior: 'smooth'});
+    }
+    // open: topic whose list is dropped down; active: topic being shown (highlighted);
+    // section: projects shown below; project: one card, or null for all
+    function render(open, active, section, project) {
+      topicCards.forEach(function (c) {
+        var on = c.dataset.topic === open;
+        c.classList.toggle('open', on);
+        c.classList.toggle('active', on || c.dataset.topic === active);
+        c.querySelector('.tc-head').setAttribute('aria-expanded', on ? 'true' : 'false');
+        c.querySelectorAll('.tc-list a').forEach(function (a) {
+          a.classList.toggle('current', a.getAttribute('href') === '#' + (project ? project.id : section ? section.id : ''));
+        });
+      });
+      sections.forEach(function (s) {
+        s.hidden = s !== section;
+        s.querySelectorAll('.card').forEach(function (card) { card.hidden = !!project && card !== project; });
+      });
+    }
+    function fromHash(scroll) {
+      var id = location.hash.slice(1), el = id ? document.getElementById(id) : null;
+      if (el && el.classList.contains('topic-card')) {             // a topic: drop down its list
+        render(id, id, null, null);
+        if (scroll) scrollTo(el, true);
+      } else if (el && el.matches('section.topic')) {              // "See all": every project in the topic
+        render(null, el.dataset.topic, el, null);                  // the menu closes once a choice is made
+        if (scroll) scrollTo(el);
+      } else if (el && el.matches('section.topic .card')) {        // one project
+        var sec = el.closest('section.topic');
+        render(null, sec.dataset.topic, sec, el);
+        if (scroll) scrollTo(sec);
+      } else {
+        render(null, null, null, null);
+        if (scroll && id === 'topics') scrollTo(document.getElementById('topics'));
+      }
+    }
+    function closeMenu() {
+      var open = document.querySelector('.topic-card.open');
+      if (!open) return;
+      if (location.hash.slice(1) === open.id) { history.pushState(null, '', '#topics'); fromHash(false); }
+      else { open.classList.remove('open'); open.querySelector('.tc-head').setAttribute('aria-expanded', 'false'); }
+    }
+    topicCards.forEach(function (c) {
+      c.querySelector('.tc-head').addEventListener('click', function (e) {
+        if (c.classList.contains('open')) {     // clicking the open topic closes its menu
+          e.preventDefault();
+          closeMenu();
+        } else if (location.hash.slice(1) === c.id) {   // reopen a menu after it was closed
+          e.preventDefault();
+          fromHash(false);
+        }
+      });
+    });
+    // clicking anywhere else, or pressing Escape, closes the menu
+    document.addEventListener('click', function (e) { if (!e.target.closest('.topic-card')) closeMenu(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeMenu(); });
+    window.addEventListener('hashchange', function () { fromHash(true); });
+    fromHash(true);
+  })();
+  </script>
 </body>
 </html>
