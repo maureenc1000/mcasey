@@ -1,0 +1,347 @@
+/* Maureen Casey | Data Portfolio
+   Colors kept from the original site: dark blue #001f4d, banner overlay, light blue #ADD8E6 */
+:root {
+    --navy: #001f4d;
+    --navy-overlay: rgba(0, 49, 83, 0.78);
+    --light-blue: #ADD8E6;
+    --page: #eaf4f8;
+    --card: #ffffff;
+    --text: #1b2533;
+    --muted: #4a5a6e;
+    --border: #c9dde6;
+    --accent: #0072B2;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    background: var(--page);
+    line-height: 1.6;
+}
+
+/* Header: the technology image as a faded background, with real text on top.
+   --hero-tint sets how faded the image is (0 = full image, 1 = plain navy). */
+.hero {
+    --hero-tint: 0.70;
+    background-color: var(--navy);
+    background-image:
+        linear-gradient(rgba(0, 31, 77, var(--hero-tint)), rgba(0, 31, 77, var(--hero-tint))),
+        url("images/hero-tech.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+}
+.overlay {
+    padding: 56px 20px 40px;
+}
+.hero .rule {
+    width: 96px;
+    height: 4px;
+    margin: 14px auto 16px;
+    background: var(--light-blue);
+    border-radius: 3px;
+}
+.hero .title {
+    margin: 0;
+    font-size: clamp(1.15rem, 2.6vw, 1.6rem);
+    font-weight: bold;
+    color: var(--light-blue);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+.hero .focus {
+    margin: 6px 0 0;
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+.hero .focus span { opacity: 0.6; margin: 0 6px; }
+.hero .focus b { font-weight: normal; white-space: nowrap; }   /* keep each focus area on one line */
+.hero .creds {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 16px;
+}
+.hero .creds span {
+    padding: 4px 14px;
+    border: 2px solid rgba(255, 255, 255, 0.75);
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.08);
+}
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+.hero h1 {
+    margin: 0 0 8px;
+    font-size: clamp(2rem, 5vw, 3rem);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+.hero .tagline {
+    margin: 0 0 6px;
+    font-size: clamp(1rem, 2.4vw, 1.2rem);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+.hero .summary {
+    margin: 12px auto 0;
+    max-width: 640px;
+    opacity: 0.92;
+}
+.hero-links { margin-top: 20px; }
+.hero-links a {
+    display: inline-block;
+    margin: 4px 6px;
+    padding: 8px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 999px;
+    color: white;
+    text-decoration: none;
+}
+.hero-links a:hover { background: rgba(255, 255, 255, 0.15); }
+
+/* Sticky topic navigation */
+.topics {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--navy);
+    padding: 10px 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 10px;
+    justify-content: center;
+}
+.topics a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.92rem;
+    padding: 4px 12px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.1);
+}
+.topics a:hover { background: rgba(255, 255, 255, 0.25); }
+
+main {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 32px 16px 48px;
+}
+
+section.topic { margin-bottom: 44px; scroll-margin-top: 64px; }
+section.topic > h2 {
+    color: var(--navy);
+    margin: 0 0 6px;
+    padding-bottom: 6px;
+    border-bottom: 3px solid var(--light-blue);
+}
+section.topic > p.topic-intro { margin: 0 0 18px; color: var(--muted); }
+
+/* Project cards */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+}
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 6px rgba(0, 31, 77, 0.06);
+}
+.card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    object-position: top left;
+    background: #f4f8fa;
+    border-bottom: 1px solid var(--border);
+}
+.card .no-image {
+    height: 72px;
+    background: linear-gradient(135deg, var(--navy), var(--accent));
+}
+.card-body { padding: 16px 18px 18px; display: flex; flex-direction: column; flex: 1; }
+.card h3 { margin: 0 0 6px; font-size: 1.12rem; color: var(--navy); }
+.card .desc { margin: 0 0 10px; }
+.card ul.results { margin: 0 0 12px; padding-left: 18px; color: var(--muted); font-size: 0.94rem; }
+.card ul.results li { margin-bottom: 4px; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin: auto 0 12px; padding-top: 4px; }
+.tags span {
+    font-size: 0.78rem;
+    background: #e3f0f6;
+    color: var(--navy);
+    border-radius: 999px;
+    padding: 2px 10px;
+}
+.card a.view {
+    align-self: flex-start;
+    color: white;
+    background: var(--navy);
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 0.92rem;
+}
+.card a.view:hover { background: var(--accent); }
+.card .note { font-size: 0.82rem; color: var(--muted); margin: 0 0 10px; font-style: italic; }
+
+/* Contact */
+.contact {
+    background: var(--light-blue);
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+}
+.contact h2 { margin-top: 0; color: var(--navy); }
+.contact a { color: var(--navy); font-weight: bold; }
+
+footer { text-align: center; color: var(--muted); font-size: 0.85rem; padding: 0 16px 32px; }
+footer p { margin: 0 auto 6px; max-width: 720px; }
+footer .credit { font-size: 0.8rem; }
+
+@media (max-width: 600px) {
+    /* one swipeable row so the sticky bar does not cover the screen on phones */
+    .topics { flex-wrap: nowrap; overflow-x: auto; justify-content: flex-start; scrollbar-width: none; }
+    .topics a { white-space: nowrap; flex: 0 0 auto; }
+}
+
+@media (max-width: 420px) {
+    .grid { grid-template-columns: 1fr; }
+    .card img { height: 160px; }
+}
+
+/* Alternative card style: blue header with the project name, findings below (used by index_header_cards.html) */
+.header-card .card-head {
+    background: var(--navy);
+    padding: 16px 18px;
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+}
+.header-card .card-head h3 {
+    margin: 0;
+    color: white;
+    font-size: 1.15rem;
+    line-height: 1.3;
+}
+.header-card .card-body { padding-top: 14px; }
+.header-card ul.results { color: var(--text); }
+
+/* Topic cards: click one to open its projects below */
+section.topic-picker { margin-bottom: 36px; scroll-margin-top: 64px; }
+section.topic-picker > h2 {
+    color: var(--navy);
+    margin: 0 0 6px;
+    padding-bottom: 6px;
+    border-bottom: 3px solid var(--light-blue);
+}
+section.topic-picker > p.topic-intro { margin: 0 0 18px; color: var(--muted); }
+[hidden] { display: none !important; }
+.topic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    align-items: start;           /* an open dropdown does not stretch the other cards */
+    gap: 16px;
+}
+.topic-card {
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 31, 77, 0.12);
+    scroll-margin-top: 80px;
+}
+.tc-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 130px;                /* every topic card the same size */
+    padding: 18px 16px 14px;
+    background: var(--navy);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: background 0.15s;
+}
+.tc-head:hover, .tc-head:focus-visible { background: #0a3470; }
+.topic-card.active .tc-head { background: var(--accent); border-radius: 12px 12px 0 0; }
+/* the dropdown list of project names */
+.tc-list {
+    list-style: none;
+    margin: 0;
+    padding: 6px 0;
+    background: var(--card);
+    border: 2px solid var(--accent);
+    border-top: none;
+    border-radius: 0 0 12px 12px;
+}
+/* with JavaScript the list floats over the cards below, like a menu */
+html.js .topic-card { position: relative; }
+html.js .topic-card.open { z-index: 5; }    /* above the other topic cards, below the sticky topic bar */
+html.js .tc-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: 60vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 24px rgba(0, 31, 77, 0.25);
+}
+html.js .topic-card:not(.open) .tc-list { display: none; }
+html.js .topic-card.active:not(.open) .tc-head { border-radius: 12px; }
+html:not(.js) .tc-head { border-radius: 12px 12px 0 0; }
+html:not(.js) .tc-list { border-color: var(--navy); }
+.tc-list a {
+    display: block;
+    padding: 8px 16px;
+    color: var(--navy);
+    text-decoration: none;
+    font-size: 0.95rem;
+    line-height: 1.35;
+}
+.tc-list a:hover, .tc-list a:focus-visible { background: #e3f0f6; }
+.tc-list a.current { background: #e3f0f6; font-weight: bold; border-left: 4px solid var(--accent); padding-left: 12px; }
+.tc-list .tc-all { border-top: 1px solid var(--border); margin-top: 4px; padding-top: 4px; }
+.tc-list .tc-all a { color: var(--accent); font-size: 0.88rem; }
+.tc-title { font-size: 1.12rem; font-weight: bold; line-height: 1.3; }
+/* dropdown arrow: a chevron that flips up when the topic is open */
+.tc-arrow {
+    width: 12px;
+    height: 12px;
+    border-right: 3px solid var(--light-blue);
+    border-bottom: 3px solid var(--light-blue);
+    transform: rotate(45deg);
+    transition: transform 0.2s;
+}
+.topic-card.active .tc-arrow { border-color: white; }
+.topic-card.open .tc-arrow { transform: translateY(4px) rotate(225deg); }
+html:not(.js) .tc-arrow { display: none; }
+.topic-bar { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 16px; border-bottom: 3px solid var(--light-blue); margin-bottom: 6px; }
+.topic-bar h2 { color: var(--navy); margin: 0; padding-bottom: 6px; }
+.topic-bar .back { color: var(--accent); font-size: 0.92rem; padding-bottom: 6px; }
+html:not(.js) .topic-bar .back { display: none; }
+
+/* Middle card style: blue header, findings, then a smaller chart (used by index.html) */
+.header-card img.card-chart {
+    display: block;
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    background: #f7fafc;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin: 4px 0 12px;
+}
