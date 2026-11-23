@@ -22,22 +22,57 @@ body {
     line-height: 1.6;
 }
 
-/* Header: the banner image (it carries the name and title), then the summary and links */
+/* Header: the technology image as a faded background, with real text on top.
+   --hero-tint sets how faded the image is (0 = full image, 1 = plain navy). */
 .hero {
-    /* colors sampled from the banner's bottom edge, so the strip below it has no seam */
-    background: linear-gradient(90deg, #001f4d 0%, #001f4d 25%, #092c5c 50%, #072d64 75%, #0a3470 100%);
+    --hero-tint: 0.70;
+    background-color: var(--navy);
+    background-image:
+        linear-gradient(rgba(0, 31, 77, var(--hero-tint)), rgba(0, 31, 77, var(--hero-tint))),
+        url("images/hero-tech.jpg");
+    background-size: cover;
+    background-position: center;
     color: white;
     text-align: center;
 }
-.hero img.banner {
-    display: block;
-    width: 100%;
-    max-width: 1584px;
-    height: auto;
-    margin: 0 auto;
-}
 .overlay {
-    padding: 4px 20px 28px;
+    padding: 56px 20px 40px;
+}
+.hero .rule {
+    width: 96px;
+    height: 4px;
+    margin: 14px auto 16px;
+    background: var(--light-blue);
+    border-radius: 3px;
+}
+.hero .title {
+    margin: 0;
+    font-size: clamp(1.15rem, 2.6vw, 1.6rem);
+    font-weight: bold;
+    color: var(--light-blue);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+.hero .focus {
+    margin: 6px 0 0;
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+.hero .focus span { opacity: 0.6; margin: 0 6px; }
+.hero .focus b { font-weight: normal; white-space: nowrap; }   /* keep each focus area on one line */
+.hero .creds {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 16px;
+}
+.hero .creds span {
+    padding: 4px 14px;
+    border: 2px solid rgba(255, 255, 255, 0.75);
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.08);
 }
 .sr-only {
     position: absolute;
@@ -178,8 +213,6 @@ footer p { margin: 0 auto 6px; max-width: 720px; }
 footer .credit { font-size: 0.8rem; }
 
 @media (max-width: 600px) {
-    /* on phones, crop the banner's chart graphic so the name and title show larger */
-    .hero img.banner { height: 160px; object-fit: cover; object-position: 86% 50%; }
     /* one swipeable row so the sticky bar does not cover the screen on phones */
     .topics { flex-wrap: nowrap; overflow-x: auto; justify-content: flex-start; scrollbar-width: none; }
     .topics a { white-space: nowrap; flex: 0 0 auto; }
